@@ -43,7 +43,7 @@ function reduceToAllTrue(sourceArray) {
 
   for(let i = 0; i < sourceArray.length; i++) {
 
-     if(!!true) {
+     if(!!sourceArray[i]) {
        sourceArray[i] = true 
        return sourceArray[i] 
      }
