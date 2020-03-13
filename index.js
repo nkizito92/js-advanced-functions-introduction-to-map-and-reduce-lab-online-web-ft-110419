@@ -32,10 +32,29 @@ function mapToSquare(sourceArray) {
   return newArr
 }
 
-function reduceToTotal(sourceArray, startingPoint){
-  let total = 0
+function reduceToTotal(sourceArray, startingPoint=0){
   for(let i = 0; i < sourceArray.length; i++) {
-    total += sourceArray[i] 
+    startingPoint += sourceArray[i] 
   }
-  return total
+  return startingPoint
+}
+
+function reduceToAllTrue(sourceArray) {
+
+  for(let i = 0; i < sourceArray.length; i++) {
+
+     if(!!sourceArray[i]) {
+       sourceArray[i] = true 
+       return sourceArray[i] 
+     }
+  }
+}
+
+function reduceToAnyTrue(sourceArray) {
+  for(let i = 0; i < sourceArray.length; i++) {
+    if (sourceArray[i]) {return true} 
+    else if (sourceArray[i] === "") {
+      return false
+    }
+  }
 }
