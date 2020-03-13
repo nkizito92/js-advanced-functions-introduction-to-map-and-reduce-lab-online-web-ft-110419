@@ -50,7 +50,7 @@ for (let i = 0; i < sourceArray.length; i++ ) {
 function reduceToAnyTrue(sourceArray) {
    for (let i = 0; i < src.length; i++ ) {
     if (sourceArray[i]) {
-    return true
+       return true
       
     } 
   }
